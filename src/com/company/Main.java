@@ -488,10 +488,10 @@ public class Main
 
         List<List<Vertex<Integer>>> result = tarjan.findAllSimpleCycles(graph);
 
-        result.forEach(cycle -> {
-            cycle.forEach(v -> System.out.print(v.getId() + " "));
-            System.out.println();
-        });
+//        result.forEach(cycle -> {
+//            cycle.forEach(v -> System.out.print(v.getId() + " "));
+//            System.out.println();
+//        });
 
         //yes
         //use vertices to get edges
@@ -499,10 +499,11 @@ public class Main
         // 2->3
         //etc
         double temp;
+        boolean efficient = true;
         for (List<Vertex<Integer>> list : result)
         {
             temp = VertexListProduct(graph, list);
-            log( list.toString()+ " "+ String.valueOf(temp));
+//            log( list.toString()+ " "+ String.valueOf(temp));
             if(temp > 1)
             {
                 log("yes");
@@ -512,8 +513,11 @@ public class Main
                     log(graph.map.get(VtoS(list.get(i),list.get(i+1))).printEdgeForOutput());
                 }
                 log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + temp + " kg of product " + String.valueOf(list.get(0).id)+ " from the above sequence.");
+                efficient = false;
                 break; // break because we have determined it is inefficient
             }
         }
+        if(efficient)
+        log("no");
     }
 }
