@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.*;
 
 //Graph Class
@@ -299,14 +300,16 @@ class Edge<T>
 
     public String printEdgeForOutput()
     {
+        DecimalFormat format = new DecimalFormat("0.#");
+        //                System.out.println(format.format(price));
         StringBuilder builder = new StringBuilder();
         builder.append(this.vertex1);
         builder.append(" ");
         builder.append(this.vertex2);
         builder.append(" ");
-        builder.append(this.from);
+        builder.append(format.format(this.from));
         builder.append(" ");
-        builder.append(this.to);
+        builder.append(format.format(this.to));
 
         return builder.toString();
     }
@@ -509,13 +512,14 @@ public class Main
             temp = VertexListProduct(graph, list);
             if(temp > 1)
             {
+
                 log("yes");
                 //print edges
                 for (int i = 0; i < list.size()-1; i++)
                 {
                     log(graph.map.get(VtoS(list.get(i),list.get(i+1))).printEdgeForOutput());
                 }
-                log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + temp + " kg of " + String.valueOf(list.get(0).id)+ " from the above sequence.");
+                log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + temp + " kg of product " + String.valueOf(list.get(0).id)+ " from the above sequence.");
             }
         }
     }
