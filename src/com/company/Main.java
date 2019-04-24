@@ -297,6 +297,20 @@ class Edge<T>
         return true;
     }
 
+    public String printEdgeForOutput()
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.append(this.vertex1);
+        builder.append(" ");
+        builder.append(this.vertex2);
+        builder.append(" ");
+        builder.append(this.from);
+        builder.append(" ");
+        builder.append(this.to);
+
+        return builder.toString();
+    }
+
     @Override
     public String toString()
     {
@@ -384,7 +398,7 @@ public class Main
         return String.valueOf(from.id)+String.valueOf(to.id);
     }
 
-    public static Double VertexListProduct(List<Vertex<Integer>> list, Graph<Integer> graph)
+    public static Double VertexListProduct(Graph<Integer> graph,List<Vertex<Integer>> list )
     {
         double product = 1;
         for (int i = 0; i < list.size()-1; i++)
@@ -476,12 +490,33 @@ public class Main
             System.out.println();
         });
 
+
+//        yes
+//        1 2 1 0.9
+//        2 3 0.8 1.2
+//        3 4 1 1.5
+//        4 1 1 0.5
+//        one kg of product 1 gets 1.0125 kg of product 1 from the above sequence.
+
+        //yes
+        //use vertices to get edges
+        // 1->2
+        // 2->3
+        //etc
         double temp;
         for (List<Vertex<Integer>> list : result)
         {
-            temp = VertexListProduct(list, graph);
-
-            log(list.toString() + " " + String.valueOf(temp));
+            temp = VertexListProduct(graph, list);
+            if(temp > 1)
+            {
+                log("yes");
+                //print edges
+                for (int i = 0; i < list.size()-1; i++)
+                {
+                    log(graph.map.get(VtoS(list.get(i),list.get(i+1))).printEdgeForOutput());
+                }
+                log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + temp + " kg of " + String.valueOf(list.get(0).id)+ " from the above sequence.");
+            }
         }
     }
 }

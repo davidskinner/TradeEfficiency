@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044a51f1-4bc7-4215-a7d5-fe11b1f0e20c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/input2.txt" afterPath="$PROJECT_DIR$/input2.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Main.class" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+            <state relative-caret-position="384">
+              <caret line="518" column="0" lean-forward="false" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#659#660#0" expanded="true" />
@@ -58,9 +55,8 @@
                 <element signature="e#6368#6369#0" expanded="true" />
                 <element signature="e#6401#6402#0" expanded="true" />
                 <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-                <element signature="e#7804#7805#0" expanded="true" />
-                <element signature="e#7827#7828#0" expanded="true" />
-                <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+                <element signature="e#8176#8177#0" expanded="true" />
+                <element signature="e#8199#8200#0" expanded="true" />
                 <element signature="method#VtoS#0;class#Main#0" expanded="false" />
                 <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
                 <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
@@ -104,10 +100,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Homew</find>
-      <find>addedge</find>
       <find>tostring</find>
       <find>cycle</find>
       <find>input</find>
+      <find>addedge</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -277,12 +273,12 @@
       <updated>1555860836944</updated>
       <workItem from="1555860840327" duration="3941000" />
       <workItem from="1555946212894" duration="6034000" />
-      <workItem from="1556063384785" duration="6308000" />
+      <workItem from="1556063384785" duration="8106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16283000" />
+    <option name="totallyTimeSpent" value="18081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -328,18 +324,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>481</line>
+          <line>509</line>
           <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>455</line>
-          <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -384,9 +374,8 @@
             <element signature="e#6368#6369#0" expanded="true" />
             <element signature="e#6401#6402#0" expanded="true" />
             <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#7804#7805#0" expanded="true" />
-            <element signature="e#7827#7828#0" expanded="true" />
-            <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+            <element signature="e#8176#8177#0" expanded="true" />
+            <element signature="e#8199#8200#0" expanded="true" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
             <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
@@ -442,9 +431,8 @@
             <element signature="e#6368#6369#0" expanded="true" />
             <element signature="e#6401#6402#0" expanded="true" />
             <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#7804#7805#0" expanded="true" />
-            <element signature="e#7827#7828#0" expanded="true" />
-            <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+            <element signature="e#8176#8177#0" expanded="true" />
+            <element signature="e#8199#8200#0" expanded="true" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
             <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
@@ -476,14 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -492,10 +472,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+        <state relative-caret-position="384">
+          <caret line="518" column="0" lean-forward="false" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#659#660#0" expanded="true" />
@@ -532,9 +520,8 @@
             <element signature="e#6368#6369#0" expanded="true" />
             <element signature="e#6401#6402#0" expanded="true" />
             <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#7804#7805#0" expanded="true" />
-            <element signature="e#7827#7828#0" expanded="true" />
-            <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+            <element signature="e#8176#8177#0" expanded="true" />
+            <element signature="e#8199#8200#0" expanded="true" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
             <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
