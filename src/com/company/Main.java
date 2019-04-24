@@ -4,11 +4,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.*;
 
 //Graph Class
 class Graph<T>
 {
+    //string is two vertices (K,V) -> ex. (12,EDGE)
+    public HashMap<String, Edge<T>> map = new HashMap<>();
 
     private List<Edge<T>> allEdges;
     private Map<Long,Vertex<T>> allVertex;
@@ -26,6 +29,7 @@ class Graph<T>
 
     //This works only for directed graph because for undirected graph we can end up
     //adding edges two times to allEdges
+
     public void addVertex(Vertex<T> vertex){
         if(allVertex.containsKey(vertex.getId())){
             return;
@@ -49,7 +53,7 @@ class Graph<T>
         return allVertex.get(id);
     }
 
-    public void addEdge(long id1,long id2, int weight){
+    public void addEdge(long id1,long id2, double weight){
         Vertex<T> vertex1 = null;
         if(allVertex.containsKey(id1)){
             vertex1 = allVertex.get(id1);
@@ -68,6 +72,7 @@ class Graph<T>
 
         Edge<T> edge = new Edge<T>(vertex1,vertex2,isDirected,weight);
         allEdges.add(edge);
+        map.put(String.valueOf(vertex1)+String.valueOf(vertex2),edge);
         vertex1.addAdjacentVertex(edge, vertex2);
         if(!isDirected){
             vertex2.addAdjacentVertex(edge, vertex1);
@@ -174,8 +179,7 @@ class Edge<T>
     private boolean isDirected = false;
     private Vertex<T> vertex1;
     private Vertex<T> vertex2;
-    private int weight;
-    public float coefficent;
+    public double weight;
 
     Edge(Vertex<T> vertex1, Vertex<T> vertex2)
     {
@@ -183,15 +187,8 @@ class Edge<T>
         this.vertex2 = vertex2;
     }
     
-    Edge(Vertex<T> vertex1, Vertex<T> vertex2, float coefficient)
-    {
-        this.vertex1 = vertex1;
-        this.vertex2 = vertex2;
-        this.coefficent = coefficient;
-    }
-    
 
-    Edge(Vertex<T> vertex1, Vertex<T> vertex2, boolean isDirected, int weight)
+    Edge(Vertex<T> vertex1, Vertex<T> vertex2, boolean isDirected, double weight)
     {
         this.vertex1 = vertex1;
         this.vertex2 = vertex2;
@@ -216,7 +213,7 @@ class Edge<T>
         return vertex2;
     }
 
-    int getWeight()
+    double getWeight()
     {
         return weight;
     }
@@ -266,97 +263,6 @@ class Edge<T>
     {
         return "Edge [isDirected=" + isDirected + ", vertex1=" + vertex1 + ", vertex2=" + vertex2 + ", weight=" + weight + "]";
     }
-}
-
-//Tarjan's Algorithm for SCC
-class TarjanStronglyConnectedComponent {
-
-    private Map<Vertex<Integer>, Integer> visitedTime;
-    private Map<Vertex<Integer>, Integer> lowTime;
-    private Set<Vertex<Integer>> onStack;
-    private Deque<Vertex<Integer>> stack;
-    private Set<Vertex<Integer>> visited;
-    private List<Set<Vertex<Integer>>> result;
-    private int time;
-
-    public List<Set<Vertex<Integer>>> scc(Graph<Integer> graph) {
-
-        //keeps the time when every vertex is visited
-        time = 0;
-        //keeps map of vertex to time it was visited
-        visitedTime = new HashMap<>();
-
-        //keeps map of vertex and time of first vertex visited in current DFS
-        lowTime = new HashMap<>();
-
-        //tells if a vertex is in stack or not
-        onStack = new HashSet<>();
-
-        //stack of visited vertices
-        stack = new LinkedList<>();
-
-        //tells if vertex has ever been visited or not. This is for DFS purpose.
-        visited = new HashSet<>();
-
-        //stores the strongly connected components result;
-        result = new ArrayList<>();
-
-        //start from any vertex in the graph.
-        for (Vertex<Integer> vertex : graph.getAllVertex()) {
-            if(visited.contains(vertex)) {
-                continue;
-            }
-            sccUtil(vertex);
-        }
-
-        return result;
-    }
-
-    private void sccUtil(Vertex<Integer> vertex) {
-
-        visited.add(vertex);
-        visitedTime.put(vertex, time);
-        lowTime.put(vertex, time);
-        time++;
-        stack.addFirst(vertex);
-        onStack.add(vertex);
-
-        for (Vertex child : vertex.getAdjacentVertexes()) {
-            //if child is not visited then visit it and see if it has link back to vertex's ancestor. In that case update
-            //low time to ancestor's visit time
-            if (!visited.contains(child)) {
-                sccUtil(child);
-                //sets lowTime[vertex] = min(lowTime[vertex], lowTime[child]);
-                lowTime.compute(vertex, (v, low) ->
-                        Math.min(low, lowTime.get(child))
-                );
-            } //if child is on stack then see if it was visited before vertex's low time. If yes then update vertex's low time to that.
-            else if (onStack.contains(child)) {
-                //sets lowTime[vertex] = min(lowTime[vertex], visitedTime[child]);
-                lowTime.compute(vertex, (v, low) -> Math.min(low, visitedTime.get(child))
-                );
-            }
-        }
-
-        //if vertex low time is same as visited time then this is start vertex for strongly connected component.
-        //keep popping vertices out of stack still you find current vertex. They are all part of one strongly
-        //connected component.
-        if (visitedTime.get(vertex) == lowTime.get(vertex)) {
-            Set<Vertex<Integer>> stronglyConnectedComponenet = new HashSet<>();
-            Vertex v;
-            do {
-                v = stack.pollFirst();
-                onStack.remove(v);
-                stronglyConnectedComponenet.add(v);
-            } while (!vertex.equals(v));
-            result.add(stronglyConnectedComponenet);
-        }
-    }
-
-//    public static void main(String args[]) {
-
-
-//    }
 }
 
 class AllCyclesInDirectedGraphTarjan
@@ -427,8 +333,30 @@ class AllCyclesInDirectedGraphTarjan
     }
 }
 
+
+
 public class Main
 {
+    public static Double GetWeight(Graph<Integer> graph, Vertex<Integer> from, Vertex<Integer> to)
+    {
+        return graph.map.get(VtoS(from,to)).weight;
+    }
+
+    public static  String VtoS(Vertex<Integer> from, Vertex<Integer> to)
+    {
+        return String.valueOf(from.id)+String.valueOf(to.id);
+    }
+
+    public static Double VertexListProduct(List<Vertex<Integer>> list, Graph<Integer> graph)
+    {
+        double product = 1;
+        for (int i = 0; i < list.size()-1; i++)
+        {
+            product = product * GetWeight(graph,list.get(i),list.get(i+1));
+        }
+        return product;
+    }
+
     public static void log(String str)
     {
         System.out.println(str);
@@ -496,13 +424,15 @@ public class Main
 
         log("");
 
-        graph.addEdge(1,2);
-        graph.addEdge(2,3);
-        graph.addEdge(3,4);
-        graph.addEdge(4,1);
-        graph.addEdge(2,1);
-        graph.addEdge(5,1);
-        graph.addEdge(1,5);
+        graph.addEdge(1,2,.9);
+        graph.addEdge(2,3,1.5);
+        graph.addEdge(3,4,1.5);
+        graph.addEdge(4,1,.5);
+        graph.addEdge(2,1,1.088);
+        graph.addEdge(5,1,.7);
+        graph.addEdge(1,5, 1.33);
+
+
 
         AllCyclesInDirectedGraphTarjan tarjan = new AllCyclesInDirectedGraphTarjan();
 
@@ -512,5 +442,14 @@ public class Main
             cycle.forEach(v -> System.out.print(v.getId() + " "));
             System.out.println();
         });
+
+        double temp;
+        for (List<Vertex<Integer>> list : result)
+        {
+            temp = VertexListProduct(list, graph);
+            log(String.valueOf(list.size())+" "+ String.valueOf(temp));
+        }
+
+
     }
 }
