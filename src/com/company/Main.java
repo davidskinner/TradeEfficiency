@@ -300,7 +300,7 @@ class Edge<T>
 
     public String printEdgeForOutput()
     {
-        DecimalFormat format = new DecimalFormat("0.#");
+        DecimalFormat format = new DecimalFormat("0.##");
         //                System.out.println(format.format(price));
         StringBuilder builder = new StringBuilder();
         builder.append(this.vertex1);
@@ -455,24 +455,24 @@ public class Main
         {
             BufferedReader br = new BufferedReader(new FileReader(file));
 
-            String st;
+            String line;
             int counter = 0;
-            while ((st = br.readLine()) != null)
+            while ((line = br.readLine()) != null)
             {
-                String[] splitter = st.split(" ");
+                String[] splitter = line.split(" ");
 
                 if (counter == 0)
                 {
                     // read in first line
                     numberOfVertices = Integer.valueOf(splitter[0]);
-                    log("The number of vertices is: " + String.valueOf(numberOfVertices));
+//                    log("The number of vertices is: " + String.valueOf(numberOfVertices));
 
                 } else
                 {
                     //import the Edges
                     graph.addEdge(Long.valueOf(splitter[0]),Long.valueOf(splitter[1]),Double.valueOf(splitter[2]),Double.valueOf(splitter[3]));
                 }
-                System.out.println(st);
+//                System.out.println(line);
 
                 counter++;
             }
@@ -482,7 +482,7 @@ public class Main
             e.printStackTrace();
         }
 
-        log("");
+//        log("");
 
         AllCyclesInDirectedGraphTarjan tarjan = new AllCyclesInDirectedGraphTarjan();
 
@@ -493,14 +493,6 @@ public class Main
             System.out.println();
         });
 
-
-//        yes
-//        1 2 1 0.9
-//        2 3 0.8 1.2
-//        3 4 1 1.5
-//        4 1 1 0.5
-//        one kg of product 1 gets 1.0125 kg of product 1 from the above sequence.
-
         //yes
         //use vertices to get edges
         // 1->2
@@ -510,9 +502,9 @@ public class Main
         for (List<Vertex<Integer>> list : result)
         {
             temp = VertexListProduct(graph, list);
+            log( list.toString()+ " "+ String.valueOf(temp));
             if(temp > 1)
             {
-
                 log("yes");
                 //print edges
                 for (int i = 0; i < list.size()-1; i++)
@@ -520,6 +512,7 @@ public class Main
                     log(graph.map.get(VtoS(list.get(i),list.get(i+1))).printEdgeForOutput());
                 }
                 log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + temp + " kg of product " + String.valueOf(list.get(0).id)+ " from the above sequence.");
+                break; // break because we have determined it is inefficient
             }
         }
     }
