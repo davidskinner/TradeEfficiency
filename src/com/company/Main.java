@@ -80,6 +80,33 @@ class Graph<T>
 
     }
 
+    public void addEdge(long id1,long id2, double from, double to){
+        Vertex<T> vertex1 = null;
+        if(allVertex.containsKey(id1)){
+            vertex1 = allVertex.get(id1);
+        }else{
+            vertex1 = new Vertex<T>(id1);
+            allVertex.put(id1, vertex1);
+        }
+
+        Vertex<T> vertex2 = null;
+        if(allVertex.containsKey(id2)){
+            vertex2 = allVertex.get(id2);
+        }else{
+            vertex2 = new Vertex<T>(id2);
+            allVertex.put(id2, vertex2);
+        }
+
+        Edge<T> edge = new Edge<T>(vertex1,vertex2,isDirected,from,to);
+        allEdges.add(edge);
+        map.put(String.valueOf(vertex1)+String.valueOf(vertex2),edge);
+        vertex1.addAdjacentVertex(edge, vertex2);
+        if(!isDirected){
+            vertex2.addAdjacentVertex(edge, vertex1);
+        }
+
+    }
+
     public List<Edge<T>> getAllEdges(){
         return allEdges;
     }
@@ -180,19 +207,31 @@ class Edge<T>
     private Vertex<T> vertex1;
     private Vertex<T> vertex2;
     public double weight;
+    public double from;
+    public double to;
 
     Edge(Vertex<T> vertex1, Vertex<T> vertex2)
     {
         this.vertex1 = vertex1;
         this.vertex2 = vertex2;
     }
-    
 
     Edge(Vertex<T> vertex1, Vertex<T> vertex2, boolean isDirected, double weight)
     {
         this.vertex1 = vertex1;
         this.vertex2 = vertex2;
         this.weight = weight;
+        this.isDirected = isDirected;
+    }
+    
+
+    Edge(Vertex<T> vertex1, Vertex<T> vertex2, boolean isDirected, double fromWeight, double toWeight)
+    {
+        this.vertex1 = vertex1;
+        this.vertex2 = vertex2;
+        this.from = fromWeight;
+        this.to = toWeight;
+        this.weight = toWeight/fromWeight;
         this.isDirected = isDirected;
     }
 
@@ -333,8 +372,6 @@ class AllCyclesInDirectedGraphTarjan
     }
 }
 
-
-
 public class Main
 {
     public static Double GetWeight(Graph<Integer> graph, Vertex<Integer> from, Vertex<Integer> to)
@@ -416,8 +453,7 @@ public class Main
                 } else
                 {
                     //import the Edges
-//                    activities.add(new Activity(splitter[0], splitter[1], splitter[2], splitter[3]));
-                    graph.addEdge(Long.valueOf(splitter[0]),Long.valueOf(splitter[1]),CalculateWeight(splitter[2],splitter[3]));
+                    graph.addEdge(Long.valueOf(splitter[0]),Long.valueOf(splitter[1]),Double.valueOf(splitter[2]),Double.valueOf(splitter[3]));
                 }
                 System.out.println(st);
 
@@ -444,9 +480,8 @@ public class Main
         for (List<Vertex<Integer>> list : result)
         {
             temp = VertexListProduct(list, graph);
-            log(String.valueOf(list.size())+" "+ String.valueOf(temp));
+
+            log(list.toString() + " " + String.valueOf(temp));
         }
-
-
     }
 }
