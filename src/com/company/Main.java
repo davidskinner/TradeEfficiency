@@ -357,6 +357,12 @@ public class Main
         return product;
     }
 
+    public static Double CalculateWeight(String from, String to)
+    {
+        // to divided by from
+        return Double.valueOf(to)/Double.valueOf(from);
+    }
+
     public static void log(String str)
     {
         System.out.println(str);
@@ -411,6 +417,7 @@ public class Main
                 {
                     //import the Edges
 //                    activities.add(new Activity(splitter[0], splitter[1], splitter[2], splitter[3]));
+                    graph.addEdge(Long.valueOf(splitter[0]),Long.valueOf(splitter[1]),CalculateWeight(splitter[2],splitter[3]));
                 }
                 System.out.println(st);
 
@@ -423,16 +430,6 @@ public class Main
         }
 
         log("");
-
-        graph.addEdge(1,2,.9);
-        graph.addEdge(2,3,1.5);
-        graph.addEdge(3,4,1.5);
-        graph.addEdge(4,1,.5);
-        graph.addEdge(2,1,1.088);
-        graph.addEdge(5,1,.7);
-        graph.addEdge(1,5, 1.33);
-
-
 
         AllCyclesInDirectedGraphTarjan tarjan = new AllCyclesInDirectedGraphTarjan();
 
