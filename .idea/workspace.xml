@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044a51f1-4bc7-4215-a7d5-fe11b1f0e20c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphTarjan.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphTarjan.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Edge.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Edge.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Graph.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Graph.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Vertex.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Vertex.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphJohnson.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphJohnson.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Floyd.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Floyd.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath$NegativeWeightCycleException.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath$NegativeWeightCycleException.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/TarjanStronglyConnectedComponent.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/TarjanStronglyConnectedComponent.class" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,53 +24,59 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="1013" column="5" lean-forward="true" selection-start-line="1013" selection-start-column="5" selection-end-line="1013" selection-end-column="5" />
+            <state relative-caret-position="573">
+              <caret line="834" column="0" lean-forward="false" selection-start-line="834" selection-start-column="0" selection-end-line="834" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#Graph#0" expanded="false" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#650#651#0" expanded="true" />
-                <element signature="e#1227#1228#0" expanded="true" />
-                <element signature="e#1258#1259#0" expanded="true" />
-                <element signature="e#2709#2710#0" expanded="true" />
-                <element signature="e#2731#2732#0" expanded="true" />
-                <element signature="e#2780#2781#0" expanded="true" />
-                <element signature="e#2812#2813#0" expanded="true" />
+                <element signature="method#Graph#0;class#Graph#0" expanded="false" />
+                <element signature="e#948#949#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+                <element signature="e#1552#1553#0" expanded="true" />
+                <element signature="e#1583#1584#0" expanded="true" />
+                <element signature="e#3121#3122#0" expanded="true" />
+                <element signature="e#3143#3144#0" expanded="true" />
+                <element signature="e#3192#3193#0" expanded="true" />
+                <element signature="e#3224#3225#0" expanded="true" />
                 <element signature="class#Vertex#0" expanded="false" />
-                <element signature="e#3442#3443#0" expanded="true" />
-                <element signature="e#3461#3462#0" expanded="true" />
-                <element signature="e#3486#3487#0" expanded="true" />
-                <element signature="e#3502#3503#0" expanded="true" />
-                <element signature="e#3535#3536#0" expanded="true" />
-                <element signature="e#3558#3559#0" expanded="true" />
-                <element signature="e#3582#3583#0" expanded="true" />
-                <element signature="e#3600#3601#0" expanded="true" />
-                <element signature="e#3733#3734#0" expanded="true" />
-                <element signature="e#3765#3766#0" expanded="true" />
-                <element signature="e#3815#3816#0" expanded="true" />
-                <element signature="e#3843#3844#0" expanded="true" />
-                <element signature="e#3880#3881#0" expanded="true" />
-                <element signature="e#3899#3900#0" expanded="true" />
-                <element signature="e#3927#3928#0" expanded="true" />
-                <element signature="e#3953#3954#0" expanded="true" />
-                <element signature="e#5312#5313#0" expanded="true" />
-                <element signature="e#5333#5334#0" expanded="true" />
-                <element signature="e#5361#5362#0" expanded="true" />
-                <element signature="e#5382#5383#0" expanded="true" />
-                <element signature="e#5406#5407#0" expanded="true" />
-                <element signature="e#5426#5427#0" expanded="true" />
-                <element signature="e#5459#5460#0" expanded="true" />
-                <element signature="e#5483#5484#0" expanded="true" />
+                <element signature="e#3854#3855#0" expanded="true" />
+                <element signature="e#3873#3874#0" expanded="true" />
+                <element signature="e#3898#3899#0" expanded="true" />
+                <element signature="e#3914#3915#0" expanded="true" />
+                <element signature="e#3947#3948#0" expanded="true" />
+                <element signature="e#3970#3971#0" expanded="true" />
+                <element signature="e#3994#3995#0" expanded="true" />
+                <element signature="e#4012#4013#0" expanded="true" />
+                <element signature="e#4145#4146#0" expanded="true" />
+                <element signature="e#4177#4178#0" expanded="true" />
+                <element signature="e#4227#4228#0" expanded="true" />
+                <element signature="e#4255#4256#0" expanded="true" />
+                <element signature="e#4292#4293#0" expanded="true" />
+                <element signature="e#4311#4312#0" expanded="true" />
+                <element signature="e#4339#4340#0" expanded="true" />
+                <element signature="e#4365#4366#0" expanded="true" />
+                <element signature="class#Edge#0" expanded="false" />
+                <element signature="e#5724#5725#0" expanded="true" />
+                <element signature="e#5745#5746#0" expanded="true" />
+                <element signature="e#5773#5774#0" expanded="true" />
+                <element signature="e#5794#5795#0" expanded="true" />
+                <element signature="e#5818#5819#0" expanded="true" />
+                <element signature="e#5838#5839#0" expanded="true" />
+                <element signature="e#5871#5872#0" expanded="true" />
+                <element signature="e#5895#5896#0" expanded="true" />
                 <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
+                <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
                 <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-                <element signature="e#10234#10235#0" expanded="true" />
-                <element signature="e#10248#10249#0" expanded="true" />
+                <element signature="e#10646#10647#0" expanded="true" />
+                <element signature="e#10660#10661#0" expanded="true" />
                 <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
                 <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
                 <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
                 <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+                <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+                <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
                 <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
+                <element signature="e#22780#22789#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,7 +150,6 @@
       <find>tostring</find>
       <find>cycle</find>
       <find>input</find>
-      <find>addedge</find>
       <find>long</find>
       <find>class Graph</find>
       <find>cycle added</find>
@@ -151,6 +157,11 @@
       <find>system.out.p</find>
       <find>getallvert</find>
       <find>weight</find>
+      <find>addedge</find>
+      <find>decimal</find>
+      <find>-</find>
+      <find>30</find>
+      <find>floyd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -247,11 +258,11 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Main" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="input5.txt" />
+      <option name="PROGRAM_PARAMETERS" value="input1.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -312,10 +323,9 @@
       <method />
     </configuration>
     <recent_temporary>
-      <list size="3">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
         <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -334,16 +344,15 @@
       <updated>1555860836944</updated>
       <workItem from="1555860840327" duration="3941000" />
       <workItem from="1555946212894" duration="6034000" />
-      <workItem from="1556063384785" duration="24880000" />
+      <workItem from="1556063384785" duration="34214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34855000" />
+    <option name="totallyTimeSpent" value="44189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -364,7 +373,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36638454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36638454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -414,12 +423,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>997</line>
+          <line>834</line>
           <properties />
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -431,48 +440,54 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Graph#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-            <element signature="e#2780#2781#0" expanded="true" />
-            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="method#Graph#0;class#Graph#0" expanded="false" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="e#3121#3122#0" expanded="true" />
+            <element signature="e#3143#3144#0" expanded="true" />
+            <element signature="e#3192#3193#0" expanded="true" />
+            <element signature="e#3224#3225#0" expanded="true" />
             <element signature="class#Vertex#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="true" />
-            <element signature="e#3461#3462#0" expanded="true" />
-            <element signature="e#3486#3487#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3582#3583#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
-            <element signature="e#3733#3734#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3880#3881#0" expanded="true" />
-            <element signature="e#3899#3900#0" expanded="true" />
-            <element signature="e#3927#3928#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#5312#5313#0" expanded="true" />
-            <element signature="e#5333#5334#0" expanded="true" />
-            <element signature="e#5361#5362#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
-            <element signature="e#5426#5427#0" expanded="true" />
-            <element signature="e#5459#5460#0" expanded="true" />
-            <element signature="e#5483#5484#0" expanded="true" />
+            <element signature="e#3854#3855#0" expanded="true" />
+            <element signature="e#3873#3874#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="e#3947#3948#0" expanded="true" />
+            <element signature="e#3970#3971#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="e#4012#4013#0" expanded="true" />
+            <element signature="e#4145#4146#0" expanded="true" />
+            <element signature="e#4177#4178#0" expanded="true" />
+            <element signature="e#4227#4228#0" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#4292#4293#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4339#4340#0" expanded="true" />
+            <element signature="e#4365#4366#0" expanded="true" />
+            <element signature="class#Edge#0" expanded="false" />
+            <element signature="e#5724#5725#0" expanded="true" />
+            <element signature="e#5745#5746#0" expanded="true" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5794#5795#0" expanded="true" />
+            <element signature="e#5818#5819#0" expanded="true" />
+            <element signature="e#5838#5839#0" expanded="true" />
+            <element signature="e#5871#5872#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
             <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
+            <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
             <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#10234#10235#0" expanded="true" />
-            <element signature="e#10248#10249#0" expanded="true" />
+            <element signature="e#10646#10647#0" expanded="true" />
+            <element signature="e#10660#10661#0" expanded="true" />
             <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
             <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
             <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+            <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+            <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
+            <element signature="e#22780#22789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -492,48 +507,54 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Graph#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-            <element signature="e#2780#2781#0" expanded="true" />
-            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="method#Graph#0;class#Graph#0" expanded="false" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="e#3121#3122#0" expanded="true" />
+            <element signature="e#3143#3144#0" expanded="true" />
+            <element signature="e#3192#3193#0" expanded="true" />
+            <element signature="e#3224#3225#0" expanded="true" />
             <element signature="class#Vertex#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="true" />
-            <element signature="e#3461#3462#0" expanded="true" />
-            <element signature="e#3486#3487#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3582#3583#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
-            <element signature="e#3733#3734#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3880#3881#0" expanded="true" />
-            <element signature="e#3899#3900#0" expanded="true" />
-            <element signature="e#3927#3928#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#5312#5313#0" expanded="true" />
-            <element signature="e#5333#5334#0" expanded="true" />
-            <element signature="e#5361#5362#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
-            <element signature="e#5426#5427#0" expanded="true" />
-            <element signature="e#5459#5460#0" expanded="true" />
-            <element signature="e#5483#5484#0" expanded="true" />
+            <element signature="e#3854#3855#0" expanded="true" />
+            <element signature="e#3873#3874#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="e#3947#3948#0" expanded="true" />
+            <element signature="e#3970#3971#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="e#4012#4013#0" expanded="true" />
+            <element signature="e#4145#4146#0" expanded="true" />
+            <element signature="e#4177#4178#0" expanded="true" />
+            <element signature="e#4227#4228#0" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#4292#4293#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4339#4340#0" expanded="true" />
+            <element signature="e#4365#4366#0" expanded="true" />
+            <element signature="class#Edge#0" expanded="false" />
+            <element signature="e#5724#5725#0" expanded="true" />
+            <element signature="e#5745#5746#0" expanded="true" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5794#5795#0" expanded="true" />
+            <element signature="e#5818#5819#0" expanded="true" />
+            <element signature="e#5838#5839#0" expanded="true" />
+            <element signature="e#5871#5872#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
             <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
+            <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
             <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#10234#10235#0" expanded="true" />
-            <element signature="e#10248#10249#0" expanded="true" />
+            <element signature="e#10646#10647#0" expanded="true" />
+            <element signature="e#10660#10661#0" expanded="true" />
             <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
             <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
             <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+            <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+            <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
+            <element signature="e#22780#22789#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -578,22 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Deque.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -610,55 +615,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="1013" column="5" lean-forward="true" selection-start-line="1013" selection-start-column="5" selection-end-line="1013" selection-end-column="5" />
+        <state relative-caret-position="573">
+          <caret line="834" column="0" lean-forward="false" selection-start-line="834" selection-start-column="0" selection-end-line="834" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Graph#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-            <element signature="e#2780#2781#0" expanded="true" />
-            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="method#Graph#0;class#Graph#0" expanded="false" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="e#3121#3122#0" expanded="true" />
+            <element signature="e#3143#3144#0" expanded="true" />
+            <element signature="e#3192#3193#0" expanded="true" />
+            <element signature="e#3224#3225#0" expanded="true" />
             <element signature="class#Vertex#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="true" />
-            <element signature="e#3461#3462#0" expanded="true" />
-            <element signature="e#3486#3487#0" expanded="true" />
-            <element signature="e#3502#3503#0" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3558#3559#0" expanded="true" />
-            <element signature="e#3582#3583#0" expanded="true" />
-            <element signature="e#3600#3601#0" expanded="true" />
-            <element signature="e#3733#3734#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3880#3881#0" expanded="true" />
-            <element signature="e#3899#3900#0" expanded="true" />
-            <element signature="e#3927#3928#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#5312#5313#0" expanded="true" />
-            <element signature="e#5333#5334#0" expanded="true" />
-            <element signature="e#5361#5362#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
-            <element signature="e#5426#5427#0" expanded="true" />
-            <element signature="e#5459#5460#0" expanded="true" />
-            <element signature="e#5483#5484#0" expanded="true" />
+            <element signature="e#3854#3855#0" expanded="true" />
+            <element signature="e#3873#3874#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="e#3947#3948#0" expanded="true" />
+            <element signature="e#3970#3971#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="e#4012#4013#0" expanded="true" />
+            <element signature="e#4145#4146#0" expanded="true" />
+            <element signature="e#4177#4178#0" expanded="true" />
+            <element signature="e#4227#4228#0" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#4292#4293#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4339#4340#0" expanded="true" />
+            <element signature="e#4365#4366#0" expanded="true" />
+            <element signature="class#Edge#0" expanded="false" />
+            <element signature="e#5724#5725#0" expanded="true" />
+            <element signature="e#5745#5746#0" expanded="true" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5794#5795#0" expanded="true" />
+            <element signature="e#5818#5819#0" expanded="true" />
+            <element signature="e#5838#5839#0" expanded="true" />
+            <element signature="e#5871#5872#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
             <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
+            <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
             <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#10234#10235#0" expanded="true" />
-            <element signature="e#10248#10249#0" expanded="true" />
+            <element signature="e#10646#10647#0" expanded="true" />
+            <element signature="e#10660#10661#0" expanded="true" />
             <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
             <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
             <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+            <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
+            <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
+            <element signature="e#22780#22789#0" expanded="true" />
           </folding>
         </state>
       </provider>

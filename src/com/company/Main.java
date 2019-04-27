@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
+import static java.lang.String.format;
+
 
 //Graph Class
 class Graph<T>
@@ -13,12 +15,27 @@ class Graph<T>
 	//string is two vertices (K,V) -> ex. (12,EDGE)
 	public HashMap<String, Edge<T>> map = new HashMap<>();
 
+	public double[][] adjacencyMatrix;
+
 	private List<Edge<T>> allEdges;
 	private Map<Long, Vertex<T>> allVertex;
 	boolean isDirected = false;
 
+	public Graph()
+	{
+
+	}
+
 	public Graph(boolean isDirected)
 	{
+		allEdges = new ArrayList<Edge<T>>();
+		allVertex = new HashMap<Long, Vertex<T>>();
+		this.isDirected = isDirected;
+	}
+
+	public Graph(boolean isDirected, int vertices)
+	{
+		adjacencyMatrix = new double[vertices][vertices];
 		allEdges = new ArrayList<Edge<T>>();
 		allVertex = new HashMap<Long, Vertex<T>>();
 		this.isDirected = isDirected;
@@ -117,6 +134,7 @@ class Graph<T>
 
 		Edge<T> edge = new Edge<T>(vertex1, vertex2, isDirected, from, to);
 		allEdges.add(edge);
+		adjacencyMatrix[((int) vertex1.getId())-1][((int) vertex2.getId())-1] = edge.weight;
 		map.put(String.valueOf(vertex1) + String.valueOf(vertex2), edge);
 		vertex1.addAdjacentVertex(edge, vertex2);
 		if (!isDirected)
@@ -749,20 +767,76 @@ class AllCyclesInDirectedGraphJohnson
 
 class Floyd
 {
-	List<List<Vertex<Integer>>> getPath(Graph<Integer> graph)
+	Boolean FloydWarshallBool(Graph<Integer> graph)
 	{
-		List<List<Vertex<Integer>>> temp = new ArrayList<>();
-		//pre-process the edges, multiplying all by -log()
-//		for (int i = 0; i <N ; ++i)
-//			for (int j = 0; j < N; ++j)
-//				w[i][j] = -log(w[i][j]);
-		for (Edge<Integer> edge : graph.getAllEdges())
+		int size = graph.adjacencyMatrix.length;
+		double dist[][] = new double[size][size];
+
+		for (int i = 0; i < size; i++)
 		{
-			edge.weight = -1*Math.log(edge.weight);
+			for (int j = 0; j < size; j++)
+			{
+				dist[i][j] = Double.POSITIVE_INFINITY;
+			}
 		}
 
+		int next[][] = new int[size][size];
 
-		return temp;
+//		for each edge (u,v)
+//		dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
+//		next[u][v] ← v
+		for (int i = 0; i < size; i++)
+		{
+			for (int j = 0; j < size; j++)
+			{
+				if(graph.adjacencyMatrix[i][j] > 0)
+				{
+					dist[i][j] = graph.adjacencyMatrix[i][j];
+					next[i][j] = j;
+				}
+
+			}
+		}
+
+//		for each vertex v
+//		dist[v][v] ← 0
+//		next[v][v] ← v
+		for (int i = 0; i < size; i++)
+		{
+			// along diagonal
+			dist[i][i] = 0;
+			next[i][i] = i;
+		}
+
+//		for k from 1 to |V| // standard Floyd-Warshall implementation
+//		for i from 1 to |V|
+//		for j from 1 to |V|
+//		if dist[i][j] > dist[i][k] + dist[k][j] then
+//		dist[i][j] ← dist[i][k] + dist[k][j]
+//		next[i][j] ← next[i][k]
+
+		for (int k = 0; k < size; k++)
+		{
+			for (int i = 0; i < size; i++)
+			{
+				for (int j = 0; j < size; j++)
+				{
+					if(dist[i][j] > dist[i][k] + dist[k][j])
+					{
+						dist[i][j] = dist[i][k] + dist[k][j];
+						next[i][j] = next[i][k];
+					}
+				}
+			}
+		}// end FW
+
+		for (int i = 0; i < size; i++)
+		{
+			if(dist[i][i] < 0)
+				return true;
+		}
+		return false;
+
 	}
 }
 class FloydWarshallAllPairShortestPath
@@ -923,7 +997,7 @@ public class Main
 		File file = new File("/Users/davidskinner/Documents/Repositories/LocalTradeEfficiency/" + inputFile);
 
 		int numberOfVertices = 0;
-		Graph<Integer> graph = new Graph<>(true);
+		Graph<Integer> graph = new Graph<Integer>();
 
 		try
 		{
@@ -940,6 +1014,7 @@ public class Main
 					// read in first line
 					numberOfVertices = Integer.valueOf(splitter[0]);
 					//                    log("The number of vertices is: " + String.valueOf(numberOfVertices));
+					graph = new Graph<Integer>(true,numberOfVertices);
 
 				} else
 				{
@@ -989,14 +1064,20 @@ public class Main
 //			}
 //		}
 
-		if (efficient)
-			log("no");
+//		if (efficient)
+//			log("no");
 
 		log("");
 
 		Floyd floyd = new Floyd();
-		floyd.getPath(graph);
-//
+        boolean result = floyd.FloydWarshallBool(graph);
+		System.out.println(result);
+
+		//        result.forEach(cycle -> {
+		//            cycle.forEach(v -> System.out.print(v.getId() + " "));
+		//            System.out.println();
+		//        });
+
 //		int INF = 10000000;
 //		int[][] d = {{0, 3, 6, 15}, {INF, 0, -2, INF}, {INF, INF, 0, 2}, {1, INF, INF, 0}};
 //
