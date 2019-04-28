@@ -798,7 +798,7 @@ class Floyd
 				{
 					dist[i][j] = graph.adjacencyMatrix[i][j];
 					dist[i][j] = -1* Math.log(dist[i][j]);
-					next[i][j] = j+1;
+					next[i][j] = j;
 				}
 
 			}
@@ -872,10 +872,21 @@ class Floyd
 				start = i;
 				int current = next[i][i];
 
+				ArrayList<Vertex<Integer>> path = new ArrayList<>();
+				path.add(new Vertex<Integer>(start+1));
+
+
 				while(current != start)
 				{
-					System.out.println(current);
+					System.out.println(current+1);
+					path.add(new Vertex<Integer>(current+1));
+
+					// go to the next one
 					current = next[current][0];
+				}
+				for (Vertex<Integer> d : path)
+				{
+					System.out.println(d.getId());
 				}
 
 //				while(start != 0)
