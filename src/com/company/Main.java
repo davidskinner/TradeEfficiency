@@ -9,6 +9,7 @@ import java.util.*;
 
 import static java.lang.String.format;
 
+// Graph, Vertex, Edge were taken from an online source and then modified to work with this problem
 
 //Graph Class
 class Graph<T>
@@ -446,7 +447,7 @@ class Floyd
 				}
 			}
 		}// end FW
-		
+
 		List<List<Vertex<Integer>>> output = new ArrayList<>();
 
 
@@ -456,9 +457,6 @@ class Floyd
 			//find starting point
 			if (dist[i][i] < 0)
 			{
-				//				System.out.println("dist[i][i] is : "+ String.valueOf(dist[i][i]));
-				//				System.out.println("i is: " + String.valueOf(i));
-				//				System.out.println("next[i]][i] is " + String.valueOf(next[i][i]));
 				start = i;
 				int current = next[i][i];
 
@@ -468,7 +466,6 @@ class Floyd
 
 				while (current != start)
 				{
-					//					System.out.println(current);
 					Vertex<Integer> temp = new Vertex<Integer>(current);
 					if (path.contains(temp))
 					{
@@ -490,11 +487,6 @@ class Floyd
 					current = next[current][0];
 				}
 				output.add(path);
-				System.out.println();
-				for (Vertex<Integer> d : path)
-				{
-					System.out.println(d.getId() + 1);
-				}
 
 				return output;
 
@@ -611,11 +603,9 @@ public class Main
 		//            System.out.println();
 		//        });
 
-		log("");
 
 		Floyd floyd = new Floyd();
 		List<List<Vertex<Integer>>> result = floyd.FloydWarshallPositiveEdge(graph);
-		System.out.println(result);
 
 		for (List<Vertex<Integer>> up : result)
 		{
