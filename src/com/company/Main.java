@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -619,26 +616,44 @@ public class Main
 
 		double temp;
 		boolean efficient = true;
+		String outputString = "no";
+		StringBuilder builder = new StringBuilder();
+
 		for (List<Vertex<Integer>> list : result)
 		{
 			temp = VertexListProduct(graph, list);
-			//            log( list.toString()+ " "+ String.valueOf(temp));
 			if (temp > 1)
 			{
+				// set output string to yes
+				outputString = "";
+				builder.append("yes");
+				builder.append("\n");
+
+
 				DecimalFormat format = new DecimalFormat("0.#######");
 				log("yes");
 				//print edges
 				for (int i = 0; i < list.size() - 1; i++)
 				{
-					log(graph.map.get(VtoS(list.get(i), list.get(i + 1))).printEdgeForOutput());
+					builder.append(graph.map.get(VtoS(list.get(i), list.get(i + 1))).printEdgeForOutput());
+					builder.append("\n");
 				}
-				log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + format.format(temp) + " kg of product " + String.valueOf(list.get(0).id) + " from the above sequence.");
+				builder.append("one kg of product " + String.valueOf(list.get(0).id) + " gets " + format.format(temp) + " kg of product " + String.valueOf(list.get(0).id) + " from the above sequence.");
 				efficient = false;
 				break; // break because we have determined it is inefficient
 			}
 		}
 
 		if (efficient)
-			log("no");
+			builder.append("no");
+
+		//output to file
+		try (PrintStream out = new PrintStream(new FileOutputStream(outputFile))) {
+			out.print(builder);
+
+		} catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
