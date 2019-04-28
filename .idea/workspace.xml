@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044a51f1-4bc7-4215-a7d5-fe11b1f0e20c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Floyd.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Floyd.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath$NegativeWeightCycleException.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath$NegativeWeightCycleException.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath.class" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="918" column="1" lean-forward="true" selection-start-line="918" selection-start-column="1" selection-end-line="918" selection-end-column="1" />
+            <state relative-caret-position="157">
+              <caret line="448" column="8" lean-forward="false" selection-start-line="448" selection-start-column="8" selection-end-line="448" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#Graph#0" expanded="false" />
@@ -61,18 +57,11 @@
                 <element signature="e#5843#5844#0" expanded="true" />
                 <element signature="e#5876#5877#0" expanded="true" />
                 <element signature="e#5900#5901#0" expanded="true" />
-                <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
-                <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-                <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-                <element signature="e#10651#10652#0" expanded="true" />
-                <element signature="e#10665#10666#0" expanded="true" />
-                <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-                <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-                <element signature="e#20618#20627#0" expanded="true" />
-                <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
+                <element signature="e#9502#9511#0" expanded="true" />
                 <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+                <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
                 <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-                <element signature="e#24615#24624#0" expanded="true" />
+                <element signature="e#11485#11494#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -366,12 +355,12 @@
       <updated>1555860836944</updated>
       <workItem from="1555860840327" duration="3941000" />
       <workItem from="1555946212894" duration="6034000" />
-      <workItem from="1556063384785" duration="50253000" />
+      <workItem from="1556063384785" duration="50625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60228000" />
+    <option name="totallyTimeSpent" value="60600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -446,7 +435,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>1144</line>
+          <line>633</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
@@ -511,18 +500,11 @@
             <element signature="e#5843#5844#0" expanded="true" />
             <element signature="e#5876#5877#0" expanded="true" />
             <element signature="e#5900#5901#0" expanded="true" />
-            <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
-            <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#10651#10652#0" expanded="true" />
-            <element signature="e#10665#10666#0" expanded="true" />
-            <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-            <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-            <element signature="e#20618#20627#0" expanded="true" />
-            <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
+            <element signature="e#9502#9511#0" expanded="true" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+            <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-            <element signature="e#24615#24624#0" expanded="true" />
+            <element signature="e#11485#11494#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,18 +559,11 @@
             <element signature="e#5843#5844#0" expanded="true" />
             <element signature="e#5876#5877#0" expanded="true" />
             <element signature="e#5900#5901#0" expanded="true" />
-            <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
-            <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#10651#10652#0" expanded="true" />
-            <element signature="e#10665#10666#0" expanded="true" />
-            <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-            <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-            <element signature="e#20618#20627#0" expanded="true" />
-            <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
+            <element signature="e#9502#9511#0" expanded="true" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+            <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-            <element signature="e#24615#24624#0" expanded="true" />
+            <element signature="e#11485#11494#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="918" column="1" lean-forward="true" selection-start-line="918" selection-start-column="1" selection-end-line="918" selection-end-column="1" />
+        <state relative-caret-position="157">
+          <caret line="448" column="8" lean-forward="false" selection-start-line="448" selection-start-column="8" selection-end-line="448" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Graph#0" expanded="false" />
@@ -715,18 +690,11 @@
             <element signature="e#5843#5844#0" expanded="true" />
             <element signature="e#5876#5877#0" expanded="true" />
             <element signature="e#5900#5901#0" expanded="true" />
-            <element signature="class#TarjanStronglyConnectedComponent#0" expanded="false" />
-            <element signature="class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphTarjan#0" expanded="false" />
-            <element signature="e#10651#10652#0" expanded="true" />
-            <element signature="e#10665#10666#0" expanded="true" />
-            <element signature="class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-            <element signature="method#VtoS#0;class#AllCyclesInDirectedGraphJohnson#0" expanded="false" />
-            <element signature="e#20618#20627#0" expanded="true" />
-            <element signature="class#FloydWarshallAllPairShortestPath#0" expanded="false" />
+            <element signature="e#9502#9511#0" expanded="true" />
             <element signature="method#VtoS#0;class#Main#0" expanded="false" />
+            <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-            <element signature="e#24615#24624#0" expanded="true" />
+            <element signature="e#11485#11494#0" expanded="true" />
           </folding>
         </state>
       </provider>
