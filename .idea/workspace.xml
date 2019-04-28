@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="044a51f1-4bc7-4215-a7d5-fe11b1f0e20c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphJohnson.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphJohnson.class" />
       <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Floyd.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/Floyd.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath$NegativeWeightCycleException.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath$NegativeWeightCycleException.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/TarjanStronglyConnectedComponent.class" afterPath="$PROJECT_DIR$/out/production/LocalTradeEfficiency/com/company/TarjanStronglyConnectedComponent.class" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,11 +19,10 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="834" column="0" lean-forward="false" selection-start-line="834" selection-start-column="0" selection-end-line="834" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="874" column="0" lean-forward="false" selection-start-line="874" selection-start-column="0" selection-end-line="874" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Graph#0" expanded="false" />
                 <element signature="method#Graph#0;class#Graph#0" expanded="false" />
                 <element signature="e#948#949#0" expanded="true" />
                 <element signature="e#975#976#0" expanded="true" />
@@ -55,7 +49,6 @@
                 <element signature="e#4311#4312#0" expanded="true" />
                 <element signature="e#4339#4340#0" expanded="true" />
                 <element signature="e#4365#4366#0" expanded="true" />
-                <element signature="class#Edge#0" expanded="false" />
                 <element signature="e#5724#5725#0" expanded="true" />
                 <element signature="e#5745#5746#0" expanded="true" />
                 <element signature="e#5773#5774#0" expanded="true" />
@@ -76,7 +69,7 @@
                 <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
                 <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
                 <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-                <element signature="e#22780#22789#0" expanded="true" />
+                <element signature="e#23978#23987#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,15 +146,18 @@
       <find>long</find>
       <find>class Graph</find>
       <find>cycle added</find>
-      <find>log</find>
       <find>system.out.p</find>
       <find>getallvert</find>
       <find>weight</find>
       <find>addedge</find>
       <find>decimal</find>
       <find>-</find>
-      <find>30</find>
       <find>floyd</find>
+      <find>log</find>
+      <find>10</find>
+      <find>20</find>
+      <find>30</find>
+      <find>40</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,7 +238,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -344,12 +340,12 @@
       <updated>1555860836944</updated>
       <workItem from="1555860840327" duration="3941000" />
       <workItem from="1555946212894" duration="6034000" />
-      <workItem from="1556063384785" duration="34214000" />
+      <workItem from="1556063384785" duration="43644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44189000" />
+    <option name="totallyTimeSpent" value="53619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -423,14 +419,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>834</line>
+          <line>874</line>
           <properties />
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="32" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="next[0]" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
@@ -439,7 +439,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="e#948#949#0" expanded="true" />
             <element signature="e#975#976#0" expanded="true" />
@@ -466,7 +465,6 @@
             <element signature="e#4311#4312#0" expanded="true" />
             <element signature="e#4339#4340#0" expanded="true" />
             <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="class#Edge#0" expanded="false" />
             <element signature="e#5724#5725#0" expanded="true" />
             <element signature="e#5745#5746#0" expanded="true" />
             <element signature="e#5773#5774#0" expanded="true" />
@@ -487,7 +485,7 @@
             <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
             <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-            <element signature="e#22780#22789#0" expanded="true" />
+            <element signature="e#23978#23987#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -506,7 +504,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="e#948#949#0" expanded="true" />
             <element signature="e#975#976#0" expanded="true" />
@@ -533,7 +530,6 @@
             <element signature="e#4311#4312#0" expanded="true" />
             <element signature="e#4339#4340#0" expanded="true" />
             <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="class#Edge#0" expanded="false" />
             <element signature="e#5724#5725#0" expanded="true" />
             <element signature="e#5745#5746#0" expanded="true" />
             <element signature="e#5773#5774#0" expanded="true" />
@@ -554,7 +550,7 @@
             <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
             <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-            <element signature="e#22780#22789#0" expanded="true" />
+            <element signature="e#23978#23987#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -633,11 +629,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="834" column="0" lean-forward="false" selection-start-line="834" selection-start-column="0" selection-end-line="834" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="874" column="0" lean-forward="false" selection-start-line="874" selection-start-column="0" selection-end-line="874" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Graph#0" expanded="false" />
             <element signature="method#Graph#0;class#Graph#0" expanded="false" />
             <element signature="e#948#949#0" expanded="true" />
             <element signature="e#975#976#0" expanded="true" />
@@ -664,7 +659,6 @@
             <element signature="e#4311#4312#0" expanded="true" />
             <element signature="e#4339#4340#0" expanded="true" />
             <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="class#Edge#0" expanded="false" />
             <element signature="e#5724#5725#0" expanded="true" />
             <element signature="e#5745#5746#0" expanded="true" />
             <element signature="e#5773#5774#0" expanded="true" />
@@ -685,7 +679,7 @@
             <element signature="method#GetWeight#0;class#Main#0" expanded="false" />
             <element signature="method#VertexListProduct#0;class#Main#0" expanded="false" />
             <element signature="method#CalculateWeight#0;class#Main#0" expanded="false" />
-            <element signature="e#22780#22789#0" expanded="true" />
+            <element signature="e#23978#23987#0" expanded="true" />
           </folding>
         </state>
       </provider>

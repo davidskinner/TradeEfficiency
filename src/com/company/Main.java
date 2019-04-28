@@ -769,6 +769,7 @@ class Floyd
 {
 	Boolean FloydWarshallBool(Graph<Integer> graph)
 	{
+
 		int size = graph.adjacencyMatrix.length;
 		double dist[][] = new double[size][size];
 
@@ -785,6 +786,10 @@ class Floyd
 //		for each edge (u,v)
 //		dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
 //		next[u][v] ← v
+//		for (Edge<Integer> edge : graph.getAllEdges())
+//		{
+//			edge.weight = -1*Math.log(edge.weight);
+//		}
 		for (int i = 0; i < size; i++)
 		{
 			for (int j = 0; j < size; j++)
@@ -792,7 +797,8 @@ class Floyd
 				if(graph.adjacencyMatrix[i][j] > 0)
 				{
 					dist[i][j] = graph.adjacencyMatrix[i][j];
-					next[i][j] = j;
+					dist[i][j] = -1* Math.log(dist[i][j]);
+					next[i][j] = j+1;
 				}
 
 			}
@@ -830,10 +836,58 @@ class Floyd
 			}
 		}// end FW
 
+		//print dist
+		for (int i = 0; i < next.length; i++)
+		{
+			System.out.print(String.valueOf(i+1)+": ");
+			for (int j = 0; j < next.length; j++)
+			{
+				System.out.printf("%.2f ", dist[i][j]);
+
+			}
+			System.out.println();
+		}
+
+		//print next
+		System.out.println();
+		for (int i = 0; i < next.length; i++)
+		{
+			System.out.print(String.valueOf(i+1)+": ");
+			for (int j = 0; j < next.length; j++)
+			{
+				System.out.print( next[i][j]+ " ");
+			}
+			System.out.println();
+		}
+
+		int start; // the first vertex that is negative on i,i
 		for (int i = 0; i < size; i++)
 		{
+			//find starting point
 			if(dist[i][i] < 0)
+			{
+//				System.out.println("dist[i][i] is : "+ String.valueOf(dist[i][i]));
+				System.out.println("i is: " + String.valueOf(i+1));
+//				System.out.println("next[i]][i] is " + String.valueOf(next[i][i]));
+				start = i;
+				int current = next[i][i];
+
+				while(current != start)
+				{
+					System.out.println(current);
+					current = next[current][0];
+				}
+
+//				while(start != 0)
+//				{
+//					start = next[start][0];
+//					System.out.println(start);
+//
+//				}
+
 				return true;
+
+			}
 		}
 		return false;
 
