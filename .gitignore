@@ -8,3 +8,13 @@ out/production/LocalTradeEfficiency/com/company/Graph\.class
 out/production/LocalTradeEfficiency/com/company/Main\.class
 
 out/production/LocalTradeEfficiency/com/company/Vertex\.class
+
+out/production/LocalTradeEfficiency/com/company/AllCyclesInDirectedGraphJohnson\.class
+
+out/production/LocalTradeEfficiency/com/company/Floyd\.class
+
+out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath\$NegativeWeightCycleException\.class
+
+out/production/LocalTradeEfficiency/com/company/FloydWarshallAllPairShortestPath\.class
+
+out/production/LocalTradeEfficiency/com/company/TarjanStronglyConnectedComponent\.class

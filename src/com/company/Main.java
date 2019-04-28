@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
+
 import static java.lang.String.format;
 
 
@@ -134,7 +135,7 @@ class Graph<T>
 
 		Edge<T> edge = new Edge<T>(vertex1, vertex2, isDirected, from, to);
 		allEdges.add(edge);
-		adjacencyMatrix[((int) vertex1.getId())-1][((int) vertex2.getId())-1] = edge.weight;
+		adjacencyMatrix[((int) vertex1.getId()) - 1][((int) vertex2.getId()) - 1] = edge.weight;
 		map.put(String.valueOf(vertex1) + String.valueOf(vertex2), edge);
 		vertex1.addAdjacentVertex(edge, vertex2);
 		if (!isDirected)
@@ -767,7 +768,7 @@ class AllCyclesInDirectedGraphJohnson
 
 class Floyd
 {
-	Boolean FloydWarshallBool(Graph<Integer> graph)
+	List<List<Vertex<Integer>>> FloydWarshallBool(Graph<Integer> graph)
 	{
 
 		int size = graph.adjacencyMatrix.length;
@@ -783,30 +784,30 @@ class Floyd
 
 		int next[][] = new int[size][size];
 
-//		for each edge (u,v)
-//		dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
-//		next[u][v] ← v
-//		for (Edge<Integer> edge : graph.getAllEdges())
-//		{
-//			edge.weight = -1*Math.log(edge.weight);
-//		}
+		//		for each edge (u,v)
+		//		dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
+		//		next[u][v] ← v
+		//		for (Edge<Integer> edge : graph.getAllEdges())
+		//		{
+		//			edge.weight = -1*Math.log(edge.weight);
+		//		}
 		for (int i = 0; i < size; i++)
 		{
 			for (int j = 0; j < size; j++)
 			{
-				if(graph.adjacencyMatrix[i][j] > 0)
+				if (graph.adjacencyMatrix[i][j] > 0)
 				{
 					dist[i][j] = graph.adjacencyMatrix[i][j];
-					dist[i][j] = -1* Math.log(dist[i][j]);
+					dist[i][j] = -1 * Math.log(dist[i][j]);
 					next[i][j] = j;
 				}
 
 			}
 		}
 
-//		for each vertex v
-//		dist[v][v] ← 0
-//		next[v][v] ← v
+		//		for each vertex v
+		//		dist[v][v] ← 0
+		//		next[v][v] ← v
 		for (int i = 0; i < size; i++)
 		{
 			// along diagonal
@@ -814,12 +815,12 @@ class Floyd
 			next[i][i] = i;
 		}
 
-//		for k from 1 to |V| // standard Floyd-Warshall implementation
-//		for i from 1 to |V|
-//		for j from 1 to |V|
-//		if dist[i][j] > dist[i][k] + dist[k][j] then
-//		dist[i][j] ← dist[i][k] + dist[k][j]
-//		next[i][j] ← next[i][k]
+		//		for k from 1 to |V| // standard Floyd-Warshall implementation
+		//		for i from 1 to |V|
+		//		for j from 1 to |V|
+		//		if dist[i][j] > dist[i][k] + dist[k][j] then
+		//		dist[i][j] ← dist[i][k] + dist[k][j]
+		//		next[i][j] ← next[i][k]
 
 		for (int k = 0; k < size; k++)
 		{
@@ -827,7 +828,7 @@ class Floyd
 			{
 				for (int j = 0; j < size; j++)
 				{
-					if(dist[i][j] > dist[i][k] + dist[k][j])
+					if (dist[i][j] > dist[i][k] + dist[k][j])
 					{
 						dist[i][j] = dist[i][k] + dist[k][j];
 						next[i][j] = next[i][k];
@@ -839,7 +840,7 @@ class Floyd
 		//print dist
 		for (int i = 0; i < next.length; i++)
 		{
-			System.out.print(String.valueOf(i+1)+": ");
+			System.out.print(String.valueOf(i) + ": ");
 			for (int j = 0; j < next.length; j++)
 			{
 				System.out.printf("%.2f ", dist[i][j]);
@@ -852,58 +853,71 @@ class Floyd
 		System.out.println();
 		for (int i = 0; i < next.length; i++)
 		{
-			System.out.print(String.valueOf(i+1)+": ");
+			System.out.print(String.valueOf(i) + ": ");
 			for (int j = 0; j < next.length; j++)
 			{
-				System.out.print( next[i][j]+ " ");
+				System.out.print(next[i][j] + " ");
 			}
 			System.out.println();
 		}
+		List<List<Vertex<Integer>>> output = new ArrayList<>();
+
 
 		int start; // the first vertex that is negative on i,i
 		for (int i = 0; i < size; i++)
 		{
 			//find starting point
-			if(dist[i][i] < 0)
+			if (dist[i][i] < 0)
 			{
-//				System.out.println("dist[i][i] is : "+ String.valueOf(dist[i][i]));
-				System.out.println("i is: " + String.valueOf(i+1));
-//				System.out.println("next[i]][i] is " + String.valueOf(next[i][i]));
+				//				System.out.println("dist[i][i] is : "+ String.valueOf(dist[i][i]));
+				//				System.out.println("i is: " + String.valueOf(i));
+				//				System.out.println("next[i]][i] is " + String.valueOf(next[i][i]));
 				start = i;
 				int current = next[i][i];
 
-				ArrayList<Vertex<Integer>> path = new ArrayList<>();
-				path.add(new Vertex<Integer>(start+1));
+				List<Vertex<Integer>> path = new ArrayList<>();
+				path.add(new Vertex<Integer>(start));
 
 
-				while(current != start)
+				while (current != start)
 				{
-					System.out.println(current+1);
-					path.add(new Vertex<Integer>(current+1));
+					//					System.out.println(current);
+					Vertex<Integer> temp = new Vertex<Integer>(current);
+					if (path.contains(temp))
+					{
+						int tempnext = next[(int) temp.getId()][0];
+						// trim beginning of path
+						int j = 0;
+						while (path.get(j).getId() != temp.getId())
+						{
+							path.remove(j);
+						}
+
+						break;
+					} else
+					{
+						path.add(temp);
+					}
 
 					// go to the next one
 					current = next[current][0];
 				}
+				output.add(path);
+				System.out.println();
 				for (Vertex<Integer> d : path)
 				{
-					System.out.println(d.getId());
+					System.out.println(d.getId() + 1);
 				}
 
-//				while(start != 0)
-//				{
-//					start = next[start][0];
-//					System.out.println(start);
-//
-//				}
-
-				return true;
+				return output;
 
 			}
 		}
-		return false;
+		return output;
 
 	}
 }
+
 class FloydWarshallAllPairShortestPath
 {
 
@@ -1079,7 +1093,7 @@ public class Main
 					// read in first line
 					numberOfVertices = Integer.valueOf(splitter[0]);
 					//                    log("The number of vertices is: " + String.valueOf(numberOfVertices));
-					graph = new Graph<Integer>(true,numberOfVertices);
+					graph = new Graph<Integer>(true, numberOfVertices);
 
 				} else
 				{
@@ -1098,8 +1112,8 @@ public class Main
 
 		//        log("");
 
-//		AllCyclesInDirectedGraphTarjan tarjan = new AllCyclesInDirectedGraphTarjan();
-//		List<List<Vertex<Integer>>> result = tarjan.findAllSimpleCycles(graph);
+		//		AllCyclesInDirectedGraphTarjan tarjan = new AllCyclesInDirectedGraphTarjan();
+		//		List<List<Vertex<Integer>>> result = tarjan.findAllSimpleCycles(graph);
 		//        AllCyclesInDirectedGraphJohnson johnson = new AllCyclesInDirectedGraphJohnson();
 		//        List<List<Vertex<Integer>>> result = johnson.simpleCyles(graph);
 
@@ -1108,54 +1122,66 @@ public class Main
 		//            System.out.println();
 		//        });
 
-		double temp;
-		boolean efficient = true;
-//		for (List<Vertex<Integer>> list : result)
-//		{
-//			temp = VertexListProduct(graph, list);
-//			//            log( list.toString()+ " "+ String.valueOf(temp));
-//			if (temp > 1)
-//			{
-//				DecimalFormat format = new DecimalFormat("0.#######");
-//				log("yes");
-//				//print edges
-//				for (int i = 0; i < list.size() - 1; i++)
-//				{
-//					log(graph.map.get(VtoS(list.get(i), list.get(i + 1))).printEdgeForOutput());
-//				}
-//				log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + format.format(temp) + " kg of product " + String.valueOf(list.get(0).id) + " from the above sequence.");
-//				efficient = false;
-//				break; // break because we have determined it is inefficient
-//			}
-//		}
-
-//		if (efficient)
-//			log("no");
-
 		log("");
 
 		Floyd floyd = new Floyd();
-        boolean result = floyd.FloydWarshallBool(graph);
+		List<List<Vertex<Integer>>> result = floyd.FloydWarshallBool(graph);
 		System.out.println(result);
+
+		for (List<Vertex<Integer>> up : result)
+		{
+			for (Vertex<Integer> upup:up)
+			{
+				upup.id++;
+			}
+		}
+		if(result.size() != 0)
+		result.get(0).add(new Vertex<>(result.get(0).get(0).id));
+
+		double temp;
+		boolean efficient = true;
+				for (List<Vertex<Integer>> list : result)
+				{
+ 					temp = VertexListProduct(graph, list);
+					//            log( list.toString()+ " "+ String.valueOf(temp));
+					if (temp > 1)
+					{
+						DecimalFormat format = new DecimalFormat("0.#######");
+						log("yes");
+						//print edges
+						for (int i = 0; i < list.size() - 1; i++)
+						{
+							log(graph.map.get(VtoS(list.get(i), list.get(i + 1))).printEdgeForOutput());
+						}
+						log("one kg of product " + String.valueOf(list.get(0).id) + " gets " + format.format(temp) + " kg of product " + String.valueOf(list.get(0).id) + " from the above sequence.");
+						efficient = false;
+						break; // break because we have determined it is inefficient
+					}
+				}
+
+				if (efficient)
+					log("no");
+
+
 
 		//        result.forEach(cycle -> {
 		//            cycle.forEach(v -> System.out.print(v.getId() + " "));
 		//            System.out.println();
 		//        });
 
-//		int INF = 10000000;
-//		int[][] d = {{0, 3, 6, 15}, {INF, 0, -2, INF}, {INF, INF, 0, 2}, {1, INF, INF, 0}};
-//
-//		FloydWarshallAllPairShortestPath shortestPath = new FloydWarshallAllPairShortestPath();
-//		int[][] distance = shortestPath.allPairShortestPath(d);
-//		System.out.println("Minimum Distance matrix");
-//		for (int i = 0; i < distance.length; i++)
-//		{
-//			for (int j = 0; j < distance.length; j++)
-//			{
-//				System.out.print(distance[i][j] + " ");
-//			}
-//			System.out.println("");
-//		}
+		//		int INF = 10000000;
+		//		int[][] d = {{0, 3, 6, 15}, {INF, 0, -2, INF}, {INF, INF, 0, 2}, {1, INF, INF, 0}};
+		//
+		//		FloydWarshallAllPairShortestPath shortestPath = new FloydWarshallAllPairShortestPath();
+		//		int[][] distance = shortestPath.allPairShortestPath(d);
+		//		System.out.println("Minimum Distance matrix");
+		//		for (int i = 0; i < distance.length; i++)
+		//		{
+		//			for (int j = 0; j < distance.length; j++)
+		//			{
+		//				System.out.print(distance[i][j] + " ");
+		//			}
+		//			System.out.println("");
+		//		}
 	}
 }
