@@ -3,9 +3,6 @@ package com.company;
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.*;
-
-import static java.lang.String.format;
-
 // Graph, Vertex, Edge were taken from an online source and then modified to work with this problem
 
 //Graph Class
@@ -399,6 +396,7 @@ class Floyd
 		//		{
 		//			edge.weight = -1*Math.log(edge.weight);
 		//		}
+
 		for (int i = 0; i < size; i++)
 		{
 			for (int j = 0; j < size; j++)
@@ -409,7 +407,6 @@ class Floyd
 					dist[i][j] = -1 * Math.log(dist[i][j]);
 					next[i][j] = j;
 				}
-
 			}
 		}
 
@@ -429,7 +426,6 @@ class Floyd
 		//		if dist[i][j] > dist[i][k] + dist[k][j] then
 		//		dist[i][j] ← dist[i][k] + dist[k][j]
 		//		next[i][j] ← next[i][k]
-
 		for (int k = 0; k < size; k++)
 		{
 			for (int i = 0; i < size; i++)
@@ -494,7 +490,7 @@ class Floyd
 	}
 }
 
-public class Main
+public class Homework10
 {
 	public static String VtoS(Vertex<Integer> from, Vertex<Integer> to)
 	{
@@ -529,9 +525,8 @@ public class Main
 
 	public static void main(String[] args)
 	{
-
-		String inputFile = "";
-		String outputFile = "";
+		String inputFile;
+		String outputFile;
 
 		try
 		{
@@ -549,7 +544,7 @@ public class Main
 		String str = inputFile;
 		String number = str.replaceAll("[^0-9]", "");
 
-		outputFile = "output" + number + ".txt";
+		outputFile = args[1];
 
 		File file = new File("/Users/davidskinner/Documents/Repositories/LocalTradeEfficiency/" + inputFile);
 
@@ -570,7 +565,6 @@ public class Main
 				{
 					// read in first line
 					numberOfVertices = Integer.valueOf(splitter[0]);
-					//                    log("The number of vertices is: " + String.valueOf(numberOfVertices));
 					graph = new Graph<Integer>(true, numberOfVertices);
 
 				} else
@@ -578,8 +572,6 @@ public class Main
 					//import the Edges
 					graph.addEdge(Long.valueOf(splitter[0]), Long.valueOf(splitter[1]), Float.valueOf(splitter[2]), Float.valueOf(splitter[3]));
 				}
-				//                System.out.println(line);
-
 				counter++;
 			}
 
@@ -588,22 +580,10 @@ public class Main
 			e.printStackTrace();
 		}
 
-		// for single source shortest path used in sparse graphs
-
-		//		AllCyclesInDirectedGraphTarjan tarjan = new AllCyclesInDirectedGraphTarjan();
-		//		List<List<Vertex<Integer>>> result = tarjan.findAllSimpleCycles(graph);
-		//        AllCyclesInDirectedGraphJohnson johnson = new AllCyclesInDirectedGraphJohnson();
-		//        List<List<Vertex<Integer>>> result = johnson.simpleCyles(graph);
-
-		//        result.forEach(cycle -> {
-		//            cycle.forEach(v -> System.out.print(v.getId() + " "));
-		//            System.out.println();
-		//        });
-
-
 		Floyd floyd = new Floyd();
 		List<List<Vertex<Integer>>> result = floyd.FloydWarshallPositiveEdge(graph);
 
+		// increment the vertex id from 0 -> 1, 1 -> 2, ... 49 -> 50 etc.
 		for (List<Vertex<Integer>> up : result)
 		{
 			for (Vertex<Integer> upup : up)
@@ -611,12 +591,12 @@ public class Main
 				upup.id++;
 			}
 		}
+
 		if (result.size() != 0)
 			result.get(0).add(new Vertex<>(result.get(0).get(0).id));
 
 		double temp;
 		boolean efficient = true;
-		String outputString = "no";
 		StringBuilder builder = new StringBuilder();
 
 		for (List<Vertex<Integer>> list : result)
@@ -625,13 +605,10 @@ public class Main
 			if (temp > 1)
 			{
 				// set output string to yes
-				outputString = "";
 				builder.append("yes");
 				builder.append("\n");
 
-
 				DecimalFormat format = new DecimalFormat("0.#######");
-				log("yes");
 				//print edges
 				for (int i = 0; i < list.size() - 1; i++)
 				{
@@ -648,8 +625,10 @@ public class Main
 			builder.append("no");
 
 		//output to file
-		try (PrintStream out = new PrintStream(new FileOutputStream(outputFile))) {
+		try (PrintStream out = new PrintStream(new FileOutputStream(outputFile)))
+		{
 			out.print(builder);
+			log(builder.toString()); // print out the file output to console
 
 		} catch (FileNotFoundException e)
 		{
